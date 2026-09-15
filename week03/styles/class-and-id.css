@@ -10,8 +10,6 @@ h1 {
     padding-bottom: 0;
 }
 
-
-
 p {
     margin: 0;
 }
@@ -22,13 +20,23 @@ code {
     font-size: 1.4rem;
 }
 
+.css {
+    color: darkblue;
+
+}
+
+.html {
+    color: red;
+}
+
 /* Class examples - can be reused */
 
 .box {
     margin: 20px 0;
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 10px;
-    background-color: #ddd; /* this is shorthand for #dddddd */
+    background-color: #ddd;
+    /* this is shorthand for #dddddd */
 }
 
 .highlight {
@@ -40,7 +48,7 @@ code {
 /* ID examples - should be unique */
 
 #note {
-    background-color: #333;
+    background-color: #233;
     color: white;
     width: fit-content;
 }
@@ -55,4 +63,3 @@ code {
     border-radius: 20px;
     padding: 20px
 }
-
