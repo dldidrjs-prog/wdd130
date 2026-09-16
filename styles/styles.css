@@ -1,5 +1,12 @@
 :root {
     --img-150-width: 150px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
@@ -21,14 +28,16 @@ main {
     max-width: 500px;
 }
 
+/* Removed duplications from box */
 aside {
     width: 25rem;
-    margin: 1rem;
-    border: 3px solid rgb(0 0 0 / .5);
-    padding: 10px;
-    background-color: #eee;
-    color: #333;
     text-align: center;
+}
+
+aside h2 {
+    position: relative;
+    top: 30px;
+    left: 0px;
 }
 
 aside img {
@@ -37,6 +46,7 @@ aside img {
 }
 
 main img {
+    float: right;
     width: var(--img-150-width);
     height: auto;
     border: 3px solid rgb(0 0 0 / .5);
@@ -60,4 +70,13 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: lightgray;
+    color: #123;
 }
