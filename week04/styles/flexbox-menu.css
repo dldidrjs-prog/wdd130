@@ -7,14 +7,44 @@ nav {
     background-color: #36454f;
 }
 
+/* ul에 display:flex;를 하여 각각의 네브 항목인
+li들을 자식요소로 만들고 ul은 부모요소가 된다.  */
 nav ul {
     list-style-type: none;
     display: flex;
+    /* display: flex; 부모요소 지정, 그밑은 자식*/
     flex-wrap: wrap;
+    /* flex-wrap: wrap; 떄문에 웹페이지 아이템들이
+    세로로 간다. 이것들을 100% 다 못하기떄문.
+    그러나 이걸 지우면 최대한 100%에 맞춘다. 그러나 100%는 아니기에 좀 더 작은거로
+    다 채우는것이다. 
+    wrap 으로 인해 칸이 모자라면 세로로 정렬시켜버린다.
+    
+    역으로 nav li {flex: 1 1 100%;} 를 지워도 가로로 간다.
+    왜냐, 이 항목이 크기를 100%로 맞추기 때문이다.*/
     max-width: 900px;
     margin: 0 auto;
     justify-content: space-around;
+    /* 이걸 center로 해도 칸이 모잘라서 세로로 정렬된다. */
+    /* space-between; 사이마다 공간 넣기 */
     align-items: center;
+
+    /* justify-content: 주축 , align-items: 교차축
+즉 주축이 가로 설정이면 교차축은 세로,
+주축이 세로 설정이면 교차축은 가로 기준.*/
+}
+
+nav li {
+    flex: 1 1 100%;
+
+    /* 1 = flex-grow 남은 공간이 있으면 늘릴수있다
+    ex. flex-grow: 1;
+       1 = flex-shrink 공간이 부족하면 아이템 줄일수있다
+    ex. flex-shrink: 1;
+    / 100% = flex-basis flex에서 아이템의 기본크기 지정
+    ex flex-basis: 100%; 일단 이 아이템의 기본 크기를 부모의 100%로 생각해. 라는말.
+    그러나 flex-shrink: 1이 있기 때문에 아이템이 여러개면 100% 유지못하고 줄어들 수 있다.
+    flex shorthand. */
 }
 
 nav a {

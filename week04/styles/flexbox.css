@@ -7,10 +7,33 @@ body {
     border: 3px dashed darkcyan;
     background-color: lightyellow;
     display: flex;
+    /* display: flex; 각각 아이템의 한계에 따라
+    그것을 저장하는 이 컨테이너의 크기를 줄거나 늘게한다.
+    즉, 공간을 아이템 크기에 맞춘다. */
+    /* flex-direcion: column; 은 아이템들의 방향을 가로 ->가 아닌
+    세로 로 보낸다. rowl는 가로로 한다. */
     flex-wrap: wrap;
+    /* flex-wrap: wrap;을 하면 화면 줄일떄 랩 하듯
+    감싸는 형태로 아이템들이 내려간다.
+    nowrap: 모든 요소들을 한 줄에 정렬
+    wrap: 요소들을 여러 줄에 걸쳐 정렬
+    wrap-reverse: 요소들을 여러 줄에 걸쳐 반대로 정렬*/
+    justify-content: center;
+    /*justify-content: start; 왼쪽부터 시작 end; 우측부터 시작 center; 가운데 정렬
+     space-round; 각 아이템 사이 공간 지정 
+    */
+
+    align-items: stretch;
+    /* align-items: center; 로하면 각 아이템이 본래의 크기로 돌아간다.
+    stretch; 로 하면 다시 크게 설정한 크기로 돌아온다.
+    아이템 1 2 3 이 각각 100 200 300 인데, 결국 300으로
+    스트레치 하는것이다.*/
+    flex-direction: row;
+    /* flex-direction: row; row-reverse;, column;, column-reverse; */
 }
 
 .flex-item {
+
     width: 250px;
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 20%);
@@ -20,7 +43,7 @@ body {
 }
 
 .item1 {
-    min-height: 100px;
+    min-height: 200px;
 }
 
 .item2 {
