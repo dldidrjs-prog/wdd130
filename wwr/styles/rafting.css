@@ -162,7 +162,7 @@ footer p {
     padding: 0;
 }
 
-.socialmedia {
+.socialmedia a {
     text-decoration: none;
     display: flex;
 }
