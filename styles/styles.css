@@ -9,15 +9,21 @@
     box-sizing: border-box;
 }
 
+header,
+.grid,
+footer {
+    max-width: 750px;
+}
+
 nav {
+    display: flex;
     background-color: darkblue;
-    padding: 10px
+    padding: 1rem;
 }
 
 nav a {
     color: white;
-    display: block;
-    padding: 10px;
+
 }
 
 h1 {
