@@ -39,7 +39,6 @@ h1 {
     text-align: center;
     opacity: 0.8;
     background-color: var(--main-color);
-    color: var(--in-background-color);
 }
 
 h2 {
@@ -232,6 +231,10 @@ fieldset div {
     padding: 4px;
 }
 
+.contact input:focus {
+    background: lightgoldenrodyellow;
+}
+
 .contact input[type="text"],
 .contact input[type="email"] {
     width: 250px;
@@ -276,7 +279,7 @@ fieldset div {
 .contact button {
     display: block;
     margin: 0 auto;
-    background-color: darkcyan;
+    background-color: rgb(4, 34, 34);
     border-radius: .4rem;
     color: white;
     width: 350px;
