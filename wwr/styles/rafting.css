@@ -4,7 +4,7 @@
     --in-background-color: white;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
-
+    --darkest-blue-color: rgb(2, 20, 100);
 }
 
 * {
@@ -28,7 +28,7 @@ footer {
 h1,
 h2 {
     font-family: var(--heading-font);
-    color: var(--in-background-color);
+    color: var(--darkest-blue-color);
 }
 
 h1 {
@@ -39,6 +39,7 @@ h1 {
     text-align: center;
     opacity: 0.8;
     background-color: var(--main-color);
+    color: var(--darkest-blue-color)
 }
 
 h2 {
@@ -181,7 +182,9 @@ footer .socialmedia {
 
 /* for contact page(body class) */
 .contact {
-    --in-background-color: rgb(23, 10, 207);
+    --in-background-color: rgb(2,
+            20,
+            100);
 }
 
 .contact h1,
