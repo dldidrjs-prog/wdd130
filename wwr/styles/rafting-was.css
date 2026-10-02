@@ -149,17 +149,15 @@ article {
 }
 
 footer {
-    margin-top: 10px;
     background-color: silver;
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 100px;
-    border-top: solid rgba(0 0 0 / 0.1);
-    padding: 10px;
+    gap: 120px;
 }
 
 footer p {
+    border-top: solid rgba(0 0 0 / 0.1);
     margin: 0;
     padding: 0;
 }
@@ -177,142 +175,4 @@ footer .socialmedia {
 .socialmedia a img {
     width: 50px;
     height: auto;
-}
-
-/* for contact page(body class) */
-.contact {
-    --in-background-color: rgb(23, 10, 207);
-}
-
-.contact h1,
-.contact h2 {
-    background-color: transparent;
-    padding: 0;
-}
-
-.contact h1 {
-    position: static;
-    width: auto;
-    opacity: 1;
-}
-
-.contact .hero {
-    margin: 10px 0;
-    text-align: center;
-}
-
-.contact .hero p {
-    margin: 0;
-    padding: 0;
-}
-
-fieldset {
-    border: none;
-}
-
-fieldset div {
-    margin-bottom: 10px;
-    margin-left: 30px;
-}
-
-.grid {
-    margin: 20px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 3px solid white;
-}
-
-.contact input[type="text"],
-.contact input[type="email"],
-.contact textarea {
-
-    box-sizing: border-box;
-    border-radius: .3rem;
-    padding: 4px;
-}
-
-.contact input[type="text"],
-.contact input[type="email"] {
-    width: 250px;
-}
-
-.contact textarea {
-    width: 350px;
-    height: 100px;
-    resize: vertical;
-}
-
-.name-grid,
-.email-grid {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-}
-
-.radio-grid {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.radio-1,
-.radio-2 {
-    margin-bottom: 0;
-    margin-left: 0;
-}
-
-.radio-2 {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 6px 8px;
-}
-
-.radio-2 input[type="radio"] {
-    width: auto;
-    margin: 0;
-}
-
-.contact button {
-    display: block;
-    margin: 0 auto;
-    background-color: darkcyan;
-    border-radius: .4rem;
-    color: white;
-    width: 350px;
-    height: 40px;
-}
-
-.contact button:hover {
-    background-color: yellowgreen;
-}
-
-section.three {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    border: 3px solid rgb(0 0 0 / 0.1);
-}
-
-.three h2 {
-    margin: 5px;
-    justify-self: center;
-    grid-column: span 3;
-}
-
-.three figure {
-    text-align: center;
-    margin: 0 auto;
-}
-
-.three img {
-    width: 150px;
-    height: auto;
-}
-
-.contact nav.socialmedia {
-    display: flex;
-    margin: 0;
-    padding: 0 30px 0 0;
-    gap: 10px;
 }

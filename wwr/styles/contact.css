@@ -1,0 +1,231 @@
+:root {
+    --main-color: darkgreen;
+    --write-color: black;
+    --in-background-color: rgb(23, 10, 207);
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--in-background-color);
+    font-weight: bold;
+}
+
+.hero {
+    margin: 10px 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* h1 deleted. */
+
+/* h2 deleted. */
+
+header {
+    /* boxsizing border added */
+    box-sizing: border-box;
+    border: 3px solid rgb(0 0 0/ 0.1);
+
+    background-color: silver;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 111px;
+}
+
+/* nothing changed */
+nav {
+    margin: 16px;
+    padding: 8px;
+}
+
+nav ul {
+
+    display: flex;
+    background-color: darkgreen;
+    justify-content: flex-end;
+    gap: 70px;
+    border: 1px solid #333;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset div {
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+/* justify-content check */
+.grid {
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    /* boxsizing border added */
+    box-sizing: border-box;
+    border: 3px solid white;
+
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 250px;
+    box-sizing: border-box;
+    border-radius: .3rem;
+    padding: 4px;
+}
+
+textarea {
+    width: 350px;
+    box-sizing: border-box;
+    border-radius: .3rem;
+    padding: 4px;
+}
+
+.name-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+.email-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+}
+
+.radio-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.radio-1 {
+    align-self: center;
+}
+
+.radio-1 label {
+    text-align: left;
+}
+
+.radio-2 {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    gap: 6px 8px;
+}
+
+.radio-2 input[type="radio"] {
+    width: auto;
+    margin: 0;
+    align-items: center;
+}
+
+.radio-1,
+.radio-2 {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    bottom: 10px;
+    background-color: darkcyan;
+    border-radius: .4rem;
+    color: white;
+    width: 350px;
+    height: 40px;
+
+}
+
+button:hover {
+    background-color: yellowgreen
+}
+
+section {
+    /* boxsizing border added */
+    box-sizing: border-box;
+    border: 3px solid rgb(0 0 0/ 0.1);
+}
+
+section.three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+
+.three h2 {
+    margin: 5px;
+    justify-self: center;
+    grid-column: span 3;
+
+}
+
+.three figure {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.three img {
+    width: 150px;
+    height: auto;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: silver;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 120px;
+}
+
+footer p {
+    border-top: solid rgba(0 0 0 / 0.1);
+    margin: 0;
+    padding: 0;
+}
+
+nav.socialmedia {
+    text-decoration: none;
+    display: flex;
+}
+
+footer .socialmedia {
+    margin: 0;
+    /* padding 0; > right 30px; */
+    padding-right: 30px;
+}
+
+.socialmedia a img {
+    width: 50px;
+    height: auto;
+}

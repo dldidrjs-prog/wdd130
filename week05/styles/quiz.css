@@ -1,0 +1,126 @@
+* {
+    color: navy;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: .5rem;
+    padding: .4rem;
+    /* *는 모든요소라서.. 모든요소에  margin padding 적용하게된다.
+    그래서 좀 멀어지는거임. */
+}
+
+h1 {
+    position: relative;
+    top: 30px;
+    text-align: center;
+}
+
+span {
+    font-weight: normal;
+    color: black;
+}
+
+fieldset {
+    background-color: lightgray;
+    width: 600px;
+    display: grid;
+    justify-self: center;
+    border: 10px soild darkgray;
+    border-radius: 1rem;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+.q1,
+.q2,
+.q3,
+.q4 {
+    grid-template-columns: 200px 1fr;
+    font-size: 1.2rem;
+    align-items: center;
+
+}
+
+.q1 input {
+    width: 500px;
+    margin-left: 50px;
+}
+
+input:focus {
+    background: lightgoldenrodyellow;
+}
+
+.q2 textarea {
+    width: 500px;
+    margin-left: 50px;
+}
+
+textarea:focus {
+    background: lightgoldenrodyellow;
+}
+
+.q3 select {
+    width: 500px;
+    margin-left: 50px;
+}
+
+select:focus {
+    background: lightgoldenrodyellow;
+}
+
+.q4 input {
+    width: 500px;
+    margin-left: 50px;
+}
+
+input:focus {
+    background: lightgoldenrodyellow;
+}
+
+.q4 p {
+    display: block;
+    width: 400px;
+    background-color: chocolate;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+
+}
+
+button {
+    position: relative;
+    bottom: 10px;
+    background-color: darkcyan;
+    border-radius: .4rem;
+    color: white;
+    width: 300px;
+    height: 40px;
+    align-self: center;
+    justify-self: center;
+    /* place-self: center; */
+}
+
+button:before {
+    content: ">> ";
+}
+
+button:after {
+    content: " <<";
+}
+
+button:hover {
+    background-color: navy
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 2px solid navy;
+    margin: 0.8em;
+    padding: 3px;
+}
+
+/* text-align: center; → 글자 가운데 
+margin: 0 auto; → 요소(상자) 가운데 
+align-items: center; → Grid/Flex에서 아이템 정렬 
+justify-content: center; → Flex/Grid에서 주축 방향 정렬 */

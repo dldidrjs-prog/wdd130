@@ -1,0 +1,27 @@
+table {
+    border: 2px solid rgb(140 140 140);
+    border-collapse: collapse;
+    letter-spacing: 1px;
+}
+
+th,
+td {
+    border: 1px solid rgb(150 150 150);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+thead tr,
+tfoot tr {
+    background-color: black;
+    color: white;
+    font-weight: 700
+}
+
+.southern {
+    font-weight: 700
+}
+
+.western {
+    font-weight: 700
+}
