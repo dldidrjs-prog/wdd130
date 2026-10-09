@@ -499,17 +499,19 @@ section.three {
 
 .trip-main img {
     border-radius: 5px;
-    padding: 3px;
-    width: 100%;
-    height: 180px;
+    width: 250px;
+    height: 200px;
     object-fit: cover;
+    justify-self: center;
 }
 
 .trip-main p {
     border: 5px solid rgb(232, 164, 76);
+    justify-self: center;
     font-size: 15px;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 250px;
 }
 
 .trip-main h4 {
