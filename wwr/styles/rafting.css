@@ -497,14 +497,6 @@ section.three {
     font-size: 19px;
 }
 
-.trip-main img {
-    border-radius: 5px;
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-    justify-self: center;
-}
-
 .trip-main p {
     border: 5px solid rgb(232, 164, 76);
     justify-self: center;
