@@ -1,23 +1,31 @@
+/* =========================
+   GLOBAL / SHARED
+   ========================= */
+
 :root {
     --main-color: darkgreen;
     --write-color: black;
     --in-background-color: white;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
-    --darkest-blue-color: rgb(2, 20, 100);
+    --yellow-color: rgb(252, 255, 60);
+    --darkred-color: darkred;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: var(--body-font);
     color: var(--write-color);
 }
 
+/* Common page width */
 header,
 main,
 footer {
@@ -25,10 +33,12 @@ footer {
     margin: 0 auto;
 }
 
+/* Headings */
 h1,
 h2 {
     font-family: var(--heading-font);
-    color: var(--darkest-blue-color);
+    color: var(--yellow-color);
+    background-color: var(--main-color);
 }
 
 h1 {
@@ -38,16 +48,15 @@ h1 {
     padding: 16px;
     text-align: center;
     opacity: 0.8;
-    background-color: var(--main-color);
-    color: var(--darkest-blue-color)
+
 }
 
 h2 {
-    background-color: var(--main-color);
     text-align: center;
     padding: 16px;
 }
 
+/* Header */
 header {
     background-color: silver;
     display: grid;
@@ -57,33 +66,39 @@ header {
     gap: 111px;
 }
 
-nav ul {
+header img {
+    margin: 5px;
+}
 
+/* Navigation */
+nav ul {
     display: flex;
-    background-color: darkgreen;
-    justify-content: flex-end;
-    gap: 70px;
-    border: 1px solid #333;
     list-style: none;
+    justify-content: space-around;
+    column-gap: 50px;
 }
 
 nav ul li a {
-    color: white;
-
+    color: var(--in-background-color);
+    background-color: var(--darkred-color);
+    font-size: 20px;
+    text-decoration: none;
+    border: 3px solid darkred;
+    border-radius: .5rem;
 }
 
-/* .hero's position is the mom of h1, article */
-.hero {
+/* .about-main(hero)*/
+.about-main {
     position: relative;
 }
 
-.hero img {
+.about-main img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.hero article {
+.about-main article {
     position: absolute;
     bottom: 30px;
     left: 5px;
@@ -94,7 +109,7 @@ nav ul li a {
     color: var(--in-background-color);
 }
 
-.hero article img {
+.about-main article img {
     float: right;
     width: 125px;
     height: auto;
@@ -108,6 +123,7 @@ section {
     gap: 10px;
     margin: 16px 0;
     padding: 8px 0;
+
 }
 
 section h2 {
@@ -141,6 +157,7 @@ section.five {
 
 }
 
+/* General spacing */
 nav,
 p,
 article {
@@ -180,16 +197,28 @@ footer .socialmedia {
     height: auto;
 }
 
-/* for contact page(body class) */
-.contact {
-    --in-background-color: rgb(2,
-            20,
-            100);
+/* common for input and button */
+input:focus {
+    background: lightgoldenrodyellow;
 }
 
+button {
+    width: 100px;
+    height: 20px;
+    margin: 20px;
+    color: green;
+}
+
+button:hover {
+    background-color: lightskyblue;
+}
+
+/* for contact page(body class) */
 .contact h1,
 .contact h2 {
-    background-color: transparent;
+    font-family: var(--heading-font);
+    color: var(--main-color);
+    background-color: white;
     padding: 0;
 }
 
@@ -199,12 +228,13 @@ footer .socialmedia {
     opacity: 1;
 }
 
-.contact .hero {
+.contact .contact-main {
+
     margin: 10px 0;
     text-align: center;
 }
 
-.contact .hero p {
+.contact .contact-main p {
     margin: 0;
     padding: 0;
 }
@@ -315,4 +345,210 @@ section.three {
 .three img {
     width: 150px;
     height: auto;
+}
+
+/* for index page(body class) */
+/* main-first part */
+.index-main {
+    position: relative;
+}
+
+.index-main h1 {
+    position: absolute;
+    width: 100%;
+    font-size: 40px;
+    background-color: transparent;
+    color: rgb(4, 0, 248);
+}
+
+.index-main h2 {
+    top: 60px;
+    position: absolute;
+    width: 100%;
+    font-size: 30px;
+    background-color: transparent;
+    color: rgb(8, 6, 114);
+}
+
+.index-main img {
+    position: block;
+    width: 100%;
+    height: auto;
+}
+
+/* main-second part */
+.index-intro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.index-intro h3 {
+    grid-column: 1 / 5;
+    text-align: center;
+    color: var(--main-color);
+    padding: 10px;
+    font-size: 25px;
+    border-top: 2px solid lightgray;
+}
+
+.index-intro p {
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    grid-column: 1 / 3;
+}
+
+.index-intro nav {
+    box-sizing: border-box;
+    border: 5px solid lightgray;
+    border-radius: .6rem;
+    background-color: darkred;
+    grid-column: 3 / 5;
+    width: 70%;
+    justify-self: center;
+}
+
+.index-intro nav ul a {
+    box-sizing: border-box;
+    color: white;
+    background-color: darkred;
+    border: 0;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.index-intro h4 {
+    grid-column: 1 / 3;
+    text-align: center;
+    color: var(--main-color);
+    padding: 10px;
+    font-size: 22px;
+    border-top: 2px solid lightgray;
+    align-content: center;
+}
+
+.index-intro a {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(100, 100, 129);
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.index-intro a img {
+    width: 100%;
+    height: auto;
+}
+
+.index-intro form {
+    grid-column: 3 / 5;
+    place-self: center;
+    text-align: center;
+    border: 2px solid darkred;
+    background-color: lightgray;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    width: 90%;
+    height: auto;
+}
+
+.index-intro span {
+    font-weight: bold;
+}
+
+.index-intro form input {
+    width: 250px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+/* for trip page(body class) */
+
+.trip-main section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.trip-main section > * {
+    box-sizing: border-box;
+}
+
+.trip-main {
+    background-color: rgb(238, 237, 237);
+    gap: 10px;
+}
+
+.trip-main button {
+    background-color: rgb(162, 241, 142);
+    width: 60%;
+    height: auto;
+    grid-column: 1 / 4;
+    justify-self: center;
+    border-radius: .5rem;
+}
+
+.trip-main button a {
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+}
+
+.trip-main img {
+    border-radius: 5px;
+    padding: 3px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.trip-main p {
+    border: 5px solid rgb(232, 164, 76);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.trip-main h4 {
+    border-top: 2px solid lightgray;
+    grid-column: 1 / 4;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.trip-main nav,
+.trip-main p,
+.trip-main article {
+    margin: 5px;
+    padding: 1px;
+}
+
+.trip-main button {
+    margin: 1px;
+    padding: 1px;
+}
+
+.trip-table {
+    border: 2px solid black;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    margin-bottom: 3px;
+    background-color: rgb(238, 237, 237);
+}
+
+.trip-table th {
+    border: 2px solid black;
+    text-align: center;
+    background-color: rgb(232, 164, 76);
+
+}
+
+.trip-table td {
+    border: 2px solid black;
+    text-align: center;
+
 }
